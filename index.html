@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title> Controle Financeiro </title>
+    <link href="style.css"  rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <img id="logo" src="logo.png"/> 
+        <h1> Contole financeiro </h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Resumo</a></li>
+                <li><a href="#">Configurações</a></li>
+            </ul> 
+        </nav>
+     </header>
+    <section>
+        <section class="tr">
+            <h3> Nova transação </h3>
+            <form>
+                <div>
+                    <label for="transacao"> Tipo de transação </label> <br />
+                    <select id="transacao" name="transacao" />
+                    <option value="compra"> Compra </option>
+                    <option value="doc"> DOC </option>
+                    <option value="ted"> TED </option>
+                    </select>
+                </div>
+                <div>
+                    <label for="nomemercadoria"> Nome da mercadoria </label> <br />
+                    <input id="nomemercadoria" type="text" name="first-text-field" value="input" />
+                </div>
+                <div>
+                    <label for="valor"> Valor </label> <br />
+                    <input id="valor" type="text" value="R$ 0,00" />
+                </div>
+                <div>
+                    <input type="submit" value="Adicionar transação" />
+                </div>
+            </form>
+        </section>
+
+        <section class="extratos">
+            <h3> Extrato de transações </h3> <br />
+            <table>
+                <tr>
+                    <th> Mercadoria </th>
+                    <th> Valor </th>
+                </tr>
+                <tr>
+                    <td> Lorem ipsum dolor sit amet consectetur </td>
+                    <td> R$ 12.999,99 </td>
+                </tr>
+                <tr>
+                    <td> Quis nostrud exercitation </td>
+                    <td> R$ 99,99 </td>
+                </tr>
+                <tr>
+                    <td> Lorem ipsum  </td>
+                    <td> R$ 9,99 </td>
+                </tr>
+                <tr>
+                    <td> Total </td>
+                    <td>
+                        R$ 12.909,99
+                        <p class="lucro"> [LUCRO] </p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </section>
+    
+    
+</body>
+</html>
