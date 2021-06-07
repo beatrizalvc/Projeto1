@@ -12,7 +12,6 @@ header {
     flex-direction: row;
     align-items: center;
     margin: auto;
-    width: 50%;
 }
 
 header nav {
@@ -24,7 +23,7 @@ nav #logo {
     height: 36.84px;
     left: 0px;
     top: 22px;
-    padding-right: 30px;
+    padding-inline: 30px;
 }
 
 nav .menu {
@@ -50,17 +49,13 @@ a {
 
 section {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 section div {
     margin: auto;
     padding: 5px;
     width: 50%;
-    border: solid;
-    border-width: 1px;
-    border-radius: 10px;
-    border-color: #979797;
 }
 
 div .extratos {
