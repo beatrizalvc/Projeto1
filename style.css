@@ -50,10 +50,10 @@ a {
 
 section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-section .tr {
+section div {
     margin: auto;
     padding: 5px;
     width: 50%;
@@ -63,7 +63,7 @@ section .tr {
     border-color: #979797;
 }
 
-section .extratos {
+div .extratos {
     margin: auto;
     padding: 5px;
     width: 50%;
@@ -76,5 +76,14 @@ h3 {
     line-height: 24px;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
    
+}
+
+.submit {
+    background: #333333;
+    color: #ffffff;
+    border-radius: 4px;
+    width: 100%;
 }
