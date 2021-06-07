@@ -3,6 +3,7 @@
     font-size: 14px;
     line-height: 22px;
     color: #333333;
+    margin: 0;
 }
 
 header {
@@ -12,13 +13,14 @@ header {
     flex-direction: row;
     align-items: center;
     margin: auto;
+    justify-content: space-between;
 }
 
-header nav {
-   
+img#logo {
+    padding-left: 15px;
 }
 
-nav #logo {
+nav .dropdown {
     width: 40px;
     height: 36.84px;
     left: 0px;
@@ -26,14 +28,39 @@ nav #logo {
     padding-inline: 30px;
 }
 
-nav .menu {
-    list-style: none;
-    
+.botao-menu {
+    background-color: #E0E0E0;
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+    margin-top: 0px;
 }
 
-nav li {
-    display: inline;
-    margin-left: 32px;
+.botao-menu:hover {
+        background-color: #333333;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.itens-menu {
+    display: none;
+    background-color: #333333;
+    min-width: 200px;
+}
+
+.itens-menu a {
+        color: white;
+        padding: 20px;
+        text-decoration: none;
+        display: block;
+}
+
+.dropdown:hover .itens-menu {
+    display: block;
 }
 
 h1 {
