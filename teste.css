@@ -42,12 +42,18 @@ header {
 }
 
 .menu-dropdown ul li {
-        text-align: right;
-        margin: 7px 0;
-        padding: 0px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;  
+    text-align: right;
+    margin: 7px 0;
+    height: 32px;
+    padding: 0px 20px;
 }
 
 .menu-dropdown ul li:nth-child(1) {
+    display: flex;
+    justify-content: flex-start;
     text-align: left;
 }
 
@@ -140,7 +146,7 @@ table {
 
 .tr-border {
     text-align: left;
-    border-bottom: 1px solid #979797
+    border-bottom: 1px solid #979797;
 }
 
 .tr-right {
@@ -153,6 +159,10 @@ table {
 
 .tr-fim {
     text-align: center;
+}
+
+.linha-borda {
+    border-bottom: 1px solid #979797;
 }
 
 .lucro {

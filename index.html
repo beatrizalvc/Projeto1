@@ -33,7 +33,7 @@
     <section class="container">
         <div class="box-input">
             <h3 class="nova-transacao"> Nova transação </h3>
-            <form>
+            <form method="POST">
                 <div>
                     <label for="transacao"> Tipo de transação </label> <br />
                     <select id="transacao" name="transacao" >
@@ -43,11 +43,11 @@
                 </div>
                 <div>
                     <label for="mercadoria"> Nome da mercadoria </label> <br />
-                    <input id="mercadoria" type="text" name="first-text-field" value="input" />
+                    <input id="mercadoria" type="text" name="first-text-field" placeholder="Input" />
                 </div>
                 <div>
                     <label for="valor"> Valor </label> <br />
-                    <input id="valor" type="text" value="R$ 0,00" />
+                    <input id="valor" type="text" placeholder="R$ 0,00" />
                 </div>
                 <div>
                     <button class="submit" type="submit">Adicionar transação</button>
@@ -87,7 +87,6 @@
         </div>
         <p class="lucro"> [LUCRO] </p>
     </section>
-    
     <footer></footer>
 </body>
 </html>
