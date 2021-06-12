@@ -1,10 +1,9 @@
-* {
-    margin: 0;
-}
-
 body {
     font-family: 'Lato', sans-serif;
-    margin: auto;
+    margin: 0;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 /* INÍCIO DO HEADER */
@@ -14,9 +13,9 @@ header {
     height: 60px;
     width: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+	align-items:center;
 }
 
 .menu-icon div {
@@ -24,6 +23,7 @@ header {
     height: 2px;
     background-color: #333;
     margin: 6px 0;
+    margin-right: 22px;
 }
 
 .menu-dropdown ul {
@@ -76,9 +76,9 @@ header {
 }
 
 img#logo {
-    padding-left: 15px;
     width: 30px;
     height: 27.63px;
+    margin-left: 22px;
 }
 
 h1 {
@@ -142,6 +142,12 @@ form div {
 table {
     width: 100%;
     border-collapse: collapse;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+table tr th, table tr td {
+    padding: 7px;
 }
 
 .tr-border {
@@ -161,6 +167,11 @@ table {
     text-align: center;
 }
 
+.tr-borda-dupla {
+    border-top: 1px solid #979797;
+
+}
+
 .linha-borda {
     border-bottom: 1px solid #979797;
 }
@@ -169,6 +180,8 @@ table {
     text-align: right;
     font-size: 10px;
     line-height: 22px;
+    margin: 0;
+    padding-right: 10px;
 }
 
 h3 {
