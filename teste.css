@@ -57,22 +57,9 @@ header {
     text-align: left;
 }
 
-.menu-dropdown:hover ul {
-    display: block;
-}
-
 .menu-link {
     text-decoration: none;
     color: #fff;
-}
-
-.menu-link:hover {
-    color: #333;
-}
-
-.menu-dropdown ul li:hover {
-    background-color: #c4c4c4;
-    color: #333;
 }
 
 img#logo {
@@ -82,7 +69,7 @@ img#logo {
 }
 
 h1 {
-    padding-left: 10px;
+    padding: 0;
     color: #333;
     font-size: 20px;
     font-weight: 600;
@@ -95,6 +82,7 @@ h3.nova-transacao {
 
 .container {
     margin: 26px 20px;
+    max-width: 1100px;
 }
 
 form {
@@ -169,7 +157,7 @@ table tr th, table tr td {
 
 .tr-borda-dupla {
     border-top: 1px solid #979797;
-
+    
 }
 
 .linha-borda {
@@ -196,4 +184,158 @@ footer {
     width: 100%;
     bottom: 0;
     position: fixed;
+}
+
+/* MEDIA MOBILE */
+
+@media (max-width: 1100px) {
+    .menu-link:hover {
+        color: #333;
+    }
+    
+    .menu-dropdown ul li:hover {
+        background-color: #c4c4c4;
+        color: #333;
+    }
+    
+    .menu-dropdown:hover ul {
+        display: block;
+    }
+    
+}
+
+/* MEDIA TABLET */
+
+@media (min-width: 450px) {
+    .menu-dropdown ul {
+        width: 32.8%;
+        
+    }
+    
+    .box-input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #979797;
+        border-radius: 5px;
+    }
+    
+    h3.nova-transacao {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: none;
+    }
+
+    form div {
+        padding: 0;
+        margin: 0 20px;
+        flex-grow: 1;
+    }
+
+    form div:nth-child(4) {
+        align-self: baseline;
+    }
+    
+    
+}
+
+/* MEDIA TABLET LANDSCAPE */
+
+@media (min-width: 1100px) {
+    header {
+        height: 80px;
+    }
+
+    h1 {
+        flex-grow: 1;
+        padding-left: 20px;
+    }
+    
+    .menu-dropdown ul {
+        display: flex;
+        position: fixed;
+        align-items: center;
+        background-color: #fff;
+        margin: 20px;
+        height: 40px;
+        padding: 0;
+    }
+
+    .menu-dropdown ul li:nth-child(2) {
+        border-right: 1px solid #979797;
+    }
+
+    .menu-dropdown ul li:nth-child(3) {
+        border-right: 1px solid #979797;
+    }
+
+    .menu-link {
+        text-decoration: none;
+        color: #333;
+        text-align: center;
+    }
+
+    .menu-dropdown ul li:nth-child(1) {
+        display: none;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+    }
+
+    .box-input {
+        margin: 26px 20px;
+    }
+
+    .extratos {
+        flex-grow: 1;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        width: 400px;
+        margin: 14.9px;
+    }
+
+    form div {
+        margin-bottom: 20px;
+    }
+
+    form div:nth-child(4) {
+        margin: 0;
+    }
+
+    #transacao {
+        width: 400px;
+    }
+
+    .submit {
+        align-items: center;
+        justify-content: center;
+
+    }
+
+   
+
 }

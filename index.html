@@ -11,42 +11,42 @@
 </head>
 <body>
     <header>
-        <img id="logo" src="logo1.png" />
-        <h1> Contole financeiro </h1>
-        <!-- Botão Menu -->
-        <nav class="menu-dropdown">
-            <div class="menu-icon">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-
-            <ul>
-                <li><a class="menu-link" href="#">X</a> </li>
-                <li><a class="menu-link" href="#">Limpar dados</a> </li>
-                <li><a class="menu-link" href="#">Cadastro de transações</a> </li>
-                <li><a class="menu-link" href="#">Salvar no servidor</a> </li>
-            </ul>
-
-        </nav> 
-        <!-- Botão Menu -->
+            <img id="logo" src="logo1.png" />
+            <h1> Contole financeiro </h1>
+            <!-- Botão Menu -->
+            <nav class="menu-dropdown">
+                <div class="menu-icon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+    
+                <ul>
+                    <li><a class="menu-link" href="#">X</a> </li>
+                    <li><a class="menu-link" href="#">Limpar dados</a> </li>
+                    <li><a class="menu-link" href="#">Cadastro de transações</a> </li>
+                    <li><a class="menu-link" href="#">Salvar no servidor</a> </li>
+                </ul>
+    
+            </nav> 
+            <!-- Botão Menu -->
     </header>
     <section class="container">
         <div class="box-input">
             <h3 class="nova-transacao"> Nova transação </h3>
             <form method="POST">
-                <div>
+                <div class="item">
                     <label for="transacao"> Tipo de transação </label> <br />
                     <select id="transacao" name="transacao" >
                         <option value="compra"> Compra </option>
                         <option value="venda"> Venda </option>
                     </select>
                 </div>
-                <div>
+                <div class="item-maior">
                     <label for="mercadoria"> Nome da mercadoria </label> <br />
                     <input id="mercadoria" type="text" name="first-text-field" placeholder="Input" />
                 </div>
-                <div>
+                <div class="item">
                     <label for="valor"> Valor </label> <br />
                     <input id="valor" type="text" placeholder="R$ 0,00" />
                 </div>
@@ -85,9 +85,14 @@
                     <td class="tr-left"><strong> Total </strong>  </td>
                     <td class="tr-right"><strong> R$ 12.909,99 </strong>  </td>
                 </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="lucro"> [LUCRO]</td>
+                </tr>
             </table>
         </div> 
-        <p class="lucro"> [LUCRO] </p>
+
     </section>
     <footer></footer>
 </body>
