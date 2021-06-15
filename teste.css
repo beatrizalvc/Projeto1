@@ -155,11 +155,6 @@ table tr th, table tr td {
     text-align: center;
 }
 
-.tr-borda-dupla {
-    border-top: 1px solid #979797;
-    
-}
-
 .linha-borda {
     border-bottom: 1px solid #979797;
 }
@@ -186,7 +181,7 @@ footer {
     position: fixed;
 }
 
-/* MEDIA MOBILE */
+/* MEDIA MENU MOBILE E TABLET */
 
 @media (max-width: 1100px) {
     .menu-link:hover {
@@ -234,10 +229,13 @@ footer {
         justify-content: center;
         border: none;
     }
-
+    
     form div {
         padding: 0;
         margin: 0 20px;
+    }
+
+    .div-botao {
         flex-grow: 1;
     }
 
@@ -258,8 +256,9 @@ footer {
     h1 {
         flex-grow: 1;
         padding-left: 20px;
+        margin: 19px 0;
     }
-    
+
     .menu-dropdown ul {
         display: flex;
         position: fixed;
@@ -268,13 +267,12 @@ footer {
         margin: 20px;
         height: 40px;
         padding: 0;
+        white-space: nowrap;
+        width: fit-content;
+        max-width: 1100px;
     }
 
-    .menu-dropdown ul li:nth-child(2) {
-        border-right: 1px solid #979797;
-    }
-
-    .menu-dropdown ul li:nth-child(3) {
+    .menu-dropdown ul li:nth-child(2), .menu-dropdown ul li:nth-child(3) {
         border-right: 1px solid #979797;
     }
 
@@ -322,7 +320,10 @@ footer {
         margin-bottom: 20px;
     }
 
-    form div:nth-child(4) {
+    .div-botao {
+        display: flex;
+        flex-grow: 1;
+        align-self: flex-end;
         margin: 0;
     }
 
