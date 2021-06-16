@@ -4,7 +4,6 @@ body {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-    max-width: 1100px;
 }
 
 /* INÍCIO DO HEADER */
@@ -15,8 +14,15 @@ header {
     width: 100%;
     display: flex;
     align-items: center;
+}
+
+header section {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-	align-items:center;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .menu-icon div {
@@ -210,16 +216,8 @@ footer {
 @media (min-width: 768px) {
     .menu-dropdown ul {
         width: 32.8%;
-        
     }
     
-    .container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-    }
-
     .box-input {
         display: flex;
         flex-direction: column;
@@ -227,7 +225,6 @@ footer {
         justify-content: center;
         border: 1px solid #979797;
         border-radius: 5px;
-        width: 100%;
     }
     
     h3.nova-transacao {
@@ -235,37 +232,22 @@ footer {
         justify-content: center;
         margin: 20px 0;
     }
-
-    form {
-        border: none;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: flex-end;
-        width: 100%;
-    }
     
+    form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: none;
+    }
+
     form div {
         padding: 0;
         margin: 0 20px;
     }
-    
-    .item {
-        max-width: 22.8%;
-    }
-
-    .item-maior {
-        max-width: 42%;
-    }
 
     form div:nth-child(4) {
-        padding: 20px 0;
-        max-width: 200px;
-        flex-grow: 1;
-    }
-
-    .extratos {
-        width: 100%;
+        align-self: baseline;
     }
     
     
