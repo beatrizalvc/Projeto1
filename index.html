@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
-    <link href="teste2.css" rel="stylesheet" type="text/css" />
+    <link href="main.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Controle Financeiro </title>
 </head>
@@ -32,34 +32,35 @@
         </section>
     </header>
     <section class="container">
+        <!-- Caixa Transação -->
         <div class="box-input">
             <h3 class="nova-transacao"> Nova transação </h3>
             <form method="POST">
-               <!-- <div class="formulario"> --> 
+                <div class="formulario"> <!-- MEXENDO AQUI -->
                     <div class="item">
-                        <label for="transacao"> Tipo de transação </label> <br />
+                        <label for="transacao"> Tipo de transação </label> 
                         <select id="transacao" name="transacao" >
                             <option value="compra"> Compra </option>
                             <option value="venda"> Venda </option>
                         </select>
                     </div>
                     <div class="item-maior">
-                        <label for="mercadoria"> Nome da mercadoria </label> <br />
-                        <input id="mercadoria" type="text" name="first-text-field" placeholder="Input" />
+                        <label for="mercadoria"> Nome da mercadoria </label> 
+                        <input id="mercadoria" type="text" placeholder="Input" />
                     </div>
                     <div class="item">
-                        <label for="valor"> Valor </label> <br />
+                        <label for="valor"> Valor </label>
                         <input id="valor" type="text" placeholder="R$ 0,00" />
                     </div>
-                <!-- </div> -->
+                </div><!-- MEXENDO AQUI -->
                 <div class="botao-transacao">
+                </form>
                     <button class="submit" type="submit">Adicionar transação</button>
                 </div>
-            </form>
         </div>
-        
+        <!-- Caixa Extrato -->
         <div class="extratos">
-            <h3> Extrato de transações </h3> <br />
+            <h3> Extrato de transações </h3> 
             <table>
                 <tr class="tr-border">
                     <th></th>
@@ -88,13 +89,10 @@
                     <td class="tr-right"><strong> R$ 12.909,99 </strong>  </td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td class="lucro"> [LUCRO]</td>
+                    <td colspan="3" class="lucro"> [LUCRO]</td>
                 </tr>
             </table>
         </div> 
-
     </section>
     <footer></footer>
 </body>

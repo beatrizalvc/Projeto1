@@ -221,7 +221,6 @@ footer {
     .box-input {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         border: 1px solid #979797;
         border-radius: 5px;
@@ -233,29 +232,33 @@ footer {
         margin: 20px 0;
     }
     
-    form {
+    div.formulario {
         display: flex;
-        flex-direction: row;
-        align-items: center;
         justify-content: center;
-        border: none;
-    }
-
-    form div {
+        flex-direction: row;
         padding: 0;
-        margin: 0 20px;
     }
 
-    form div:nth-child(4) {
-        align-self: baseline;
+    div.item {
+        width: 25%;
     }
     
+    div.item-maior {
+        width: 40%;
+        padding: 0 20px;
+    }
+
+    .submit {
+        width: 30%;
+        margin: 0 15px 20px 20px;
+        float: right;
+    }
     
 }
 
-/* MEDIA TABLET LANDSCAPE */
+/* MEDIA DESKTOP */
 
-@media (min-width: 1110px) {
+@media (min-width: 1112px) {
     header {
         height: 80px;
     }
@@ -316,30 +319,22 @@ footer {
         flex-grow: 1;
     }
 
-    form {
+    div.formulario {
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
-        border: none;
-        width: 400px;
-        margin: 14.9px;
+        flex-direction: column;
+        padding: 0;
     }
 
-    form div {
-        margin-bottom: 20px;
-    }
-
-    form div:nth-child(4) {
-        margin: 0;
-    }
-
-    #transacao {
-        width: 400px;
+    div.item, div.item-maior, div.botao-transacao {
+        width: 90%;
+        padding: 20px 15px 0 15px;
     }
 
     .submit {
-        align-items: center;
-        justify-content: center;
+        margin: 0;
+        width: 100%;
+        margin-bottom: 20px;
+
     }
 }
