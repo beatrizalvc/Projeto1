@@ -21,14 +21,12 @@
                     <div></div>
                     <div></div>
                 </div>
-    
                 <ul>
                     <li><a class="menu-link" href="#">X</a> </li>
                     <li><a class="menu-link" href="#">Limpar dados</a> </li>
                     <li><a class="menu-link" href="#">Cadastro de transações</a> </li>
                     <li><a class="menu-link" href="#">Salvar no servidor</a> </li>
                 </ul>
-    
             </nav> 
             <!-- Botão Menu -->
         </section>
@@ -37,22 +35,24 @@
         <div class="box-input">
             <h3 class="nova-transacao"> Nova transação </h3>
             <form method="POST">
-                <div class="item">
-                    <label for="transacao"> Tipo de transação </label> <br />
-                    <select id="transacao" name="transacao" >
-                        <option value="compra"> Compra </option>
-                        <option value="venda"> Venda </option>
-                    </select>
-                </div>
-                <div class="item-maior">
-                    <label for="mercadoria"> Nome da mercadoria </label> <br />
-                    <input id="mercadoria" type="text" name="first-text-field" placeholder="Input" />
-                </div>
-                <div class="item">
-                    <label for="valor"> Valor </label> <br />
-                    <input id="valor" type="text" placeholder="R$ 0,00" />
-                </div>
-                <div>
+               <!-- <div class="formulario"> --> 
+                    <div class="item">
+                        <label for="transacao"> Tipo de transação </label> <br />
+                        <select id="transacao" name="transacao" >
+                            <option value="compra"> Compra </option>
+                            <option value="venda"> Venda </option>
+                        </select>
+                    </div>
+                    <div class="item-maior">
+                        <label for="mercadoria"> Nome da mercadoria </label> <br />
+                        <input id="mercadoria" type="text" name="first-text-field" placeholder="Input" />
+                    </div>
+                    <div class="item">
+                        <label for="valor"> Valor </label> <br />
+                        <input id="valor" type="text" placeholder="R$ 0,00" />
+                    </div>
+                <!-- </div> -->
+                <div class="botao-transacao">
                     <button class="submit" type="submit">Adicionar transação</button>
                 </div>
             </form>
