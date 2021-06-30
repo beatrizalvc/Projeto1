@@ -35,8 +35,9 @@
         <!-- Caixa Transação -->
         <div class="box-input">
             <h3 class="nova-transacao"> Nova transação </h3>
-            <form method="POST">
-                <div class="formulario"> <!-- MEXENDO AQUI -->
+            <!-- FOMULÁRIO -->
+            <form >
+                <div class="formulario"> 
                     <div class="item">
                         <label for="transacao"> Tipo de transação </label> 
                         <select id="transacao" name="transacao" >
@@ -45,17 +46,24 @@
                         </select>
                     </div>
                     <div class="item-maior">
-                        <label for="mercadoria"> Nome da mercadoria </label> 
-                        <input id="mercadoria" type="text" placeholder="Input" />
+                        <label id="labelMercadoria" for="mercadoria"> Nome da mercadoria </label> 
+                        <input id="mercadoria" name="mercadoria" type="text" placeholder="Input" />
+                        <!-- MENSAGEM VALIDAÇÃO JS-->
+                        <div id="divMercadoria"></div>
                     </div>
                     <div class="item">
-                        <label for="valor"> Valor </label>
-                        <input id="valor" type="text" placeholder="R$ 0,00" />
+                        <label id="labelValor" for="valor"> Valor </label>
+                        <input id="valor" name="valor" type="text" placeholder="R$ 0,00" onkeyup="formatoMoeda()" />
+                        <!-- MENSAGEM VALIDAÇÃO JS-->
+                        <div id="divValor"></div>
                     </div>
-                </div><!-- MEXENDO AQUI -->
+                </div>
                 <div class="botao-transacao">
                 </form>
-                    <button class="submit" type="submit">Adicionar transação</button>
+                <input class="submit" type="button" value="Adicionar transação" onclick="validarForm()"></input>
+                <div id="msgErro"></div>
+                <div id="msgSucesso"></div>
+                <!-- SUBTITUIR BUTTON POR INPUT COM TYPE SUBMIT-->
                 </div>
         </div>
         <!-- Caixa Extrato -->
@@ -95,5 +103,7 @@
         </div> 
     </section>
     <footer></footer>
+
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
