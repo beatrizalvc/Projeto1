@@ -157,10 +157,13 @@ form div {
     align-content: space-between;
 }
 
-table {
-    width: 100%;
+.table {
     height: 50vh;
     overflow: auto;
+}
+
+table {
+    width: 100%;
     border-collapse: collapse;
     font-size: 14px;
     line-height: 16px;

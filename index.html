@@ -41,8 +41,8 @@
                     <div class="item">
                         <label for="transacao"> Tipo de transação </label> 
                         <select id="transacao" name="transacao" >
-                            <option value="compra"> Compra </option>
-                            <option value="venda"> Venda </option>
+                            <option class="optionTransacao" value="compra"> Compra </option>
+                            <option class="optionTransacao" value="venda"> Venda </option>
                         </select>
                     </div>
                     <div class="item-maior">
@@ -53,53 +53,59 @@
                     </div>
                     <div class="item">
                         <label id="labelValor" for="valor"> Valor </label>
-                        <input id="valor" name="valor" type="text" placeholder="R$ 0,00" onkeyup="formatoMoeda()" />
+                        <input id="valor" name="valor" type="text" placeholder="R$ 0,00" onkeypress="mascaraNumero(event)" />
                         <!-- MENSAGEM VALIDAÇÃO JS-->
                         <div id="divValor"></div>
                     </div>
                 </div>
                 <div class="botao-transacao">
                 </form>
-                <input class="submit" type="button" value="Adicionar transação" onclick="validarForm()"></input>
+                <input class="submit" type="button" value="Adicionar transação" onclick="criarTabela(transacao.value, mercadoria.value, valor.value); validarForm()"></input>
                 <div id="msgErro"></div>
                 <div id="msgSucesso"></div>
-                <!-- SUBTITUIR BUTTON POR INPUT COM TYPE SUBMIT-->
                 </div>
         </div>
         <!-- Caixa Extrato -->
         <div class="extratos">
             <h3> Extrato de transações </h3> 
-            <table>
-                <tr class="tr-border">
-                    <th></th>
-                    <th> Mercadoria </th>
-                    <th class="tr-fim"> Valor </th>
-                </tr>
-                <tr class="tr-border">
-                    <td> + </td>
-                    <td> Lorem ipsum dolor sit amet consectetur </td>
-                    <td class="tr-right"> R$ 12.999,99 </td>
-                </tr>
-                <tr class="tr-border">
-                    <td> - </td>
-                    <td> Quis nostrud exercitation </td>
-                    <td class="tr-right"> R$ 99,99 </td>
-                </tr>
-                <tr class="tr-border">
-                    <td> + </td>
-                    <td> Lorem ipsum  </td>
-                    <td class="tr-right"> R$ 9,99 </td>
-                </tr>
-               
-                <tr class="tr-borda-dupla">
-                    <td></td>
-                    <td class="tr-left"><strong> Total </strong>  </td>
-                    <td class="tr-right"><strong> R$ 12.909,99 </strong>  </td>
-                </tr>
-                <tr>
-                    <td colspan="3" class="lucro"> [LUCRO]</td>
-                </tr>
-            </table>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr class="tr-border">
+                            <th></th>
+                            <th> Mercadoria </th>
+                            <th class="tr-fim"> Valor </th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"> <!-- CORPO DA TABELA -->
+                        <!-- <tr  class="tr-border">
+                            <td> + </td>
+                            <td id="tdTransacao"> Lorem ipsum dolor sit amet consectetur </td>
+                            <td class="tr-right"> R$ 12.999,99 </td>
+                        </tr>
+                        <tr class="tr-border">
+                            <td> - </td>
+                            <td> Quis nostrud exercitation </td>
+                            <td class="tr-right"> R$ 99,99 </td>
+                        </tr>
+                        <tr class="tr-border">
+                            <td> + </td>
+                            <td> Lorem ipsum  </td>
+                            <td class="tr-right"> R$ 9,99 </td>
+                        </tr> -->
+                    </tbody> <!-- FIM DO CORPO DA TABELA -->
+                   <tfoot>
+                       <tr class="tr-borda-dupla">
+                           <td></td>
+                           <td class="tr-left"><strong> Total </strong>  </td>
+                           <td class="tr-right"><strong> R$ 12.909,99 </strong>  </td>
+                       </tr>
+                       <tr>
+                           <td colspan="3" class="lucro"> [LUCRO]</td>
+                       </tr>
+                   </tfoot>
+                </table>
+            </div>
         </div> 
     </section>
     <footer></footer>

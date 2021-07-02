@@ -10,14 +10,14 @@ let labelValor = document.querySelector('#labelValor');
 let divValor = document.querySelector('#divValor');
 let validValor = false;
 
-// Divs de mensagem do botão
+// Divs de mensagem do botão (Erro ou Sucesso)
 let msgErro = document.querySelector('#msgErro');
 let msgSucesso = document.querySelector('#msgSucesso');
 
 mercadoria.addEventListener('keyup', () => { //Validando preenchimento input Mercadoria
-    if(mercadoria.value.length <= 2){ //Se o campo tiver menos de 3 caracteres
+    if(mercadoria.value.length <= 1){ //Se o campo tiver menos de 2 caracteres
         labelMercadoria.setAttribute('style', 'color: red'); //Muda a cor do nome
-        divMercadoria.innerHTML = '*Insira no mínimo 3 caracteres'; //Insere texto na div de validação JS
+        divMercadoria.innerHTML = '*Insira no mínimo 2 caracteres'; //Insere texto na div de validação JS
         validMercadoria = false; //Campo vazio
     } else {
         labelMercadoria.setAttribute('style', 'color: green'); 
@@ -55,56 +55,54 @@ function validarForm() {
     }
 }
 
-// function validarForm() {
+// Máscara do valor (Digitar apenas números)
+function mascaraNumero(e) {
+    e.preventDefault() // Evita que a qualquer tecla seja digitada
+    //console.log(e)
+    if ("1234567890".indexOf(e.key) != -1) { // Adiciona exceção dos números
+        document.querySelector('input[name=valor]').value += e.key; // Insere os números no campo
+    } 
+}
 
-//     var mercadoria = document.getElementById("mercadoria").value;
-//     var valor = document.getElementById("valor").value;
-//     var existeErro = false;
+// Salvar no LocalStorage
+var salvarStorage = function() {
+    var tipoTransacao = document.getElementById('transacao').value; //Resgata campo do HTML
+    var tipoMercadoria = document.getElementById('mercadoria').value;
+    var tipoValor = document.getElementById('valor').value;
+    localStorage.setItem('Tipo de Transacao', tipoTransacao); // Insere no localStorage
+    localStorage.setItem('Tipo de Mercadoria', tipoMercadoria);
+    localStorage.setItem('Valor', tipoValor);
+}
 
-//     if(mercadoria == "") { // valida mercadoria
-//         existeErro = true;
-//         let validarMercadoria = document.getElementById("validarMercadoria");
-//         console.log('validarMercadoria', validarMercadoria);
-//         validarMercadoria.innerHTML = "*Preencha o nome da mercadoria";
-//         //console.log('validarMercadoria depois', validarMercadoria);
-//     }
+//Adicionar info para tablea
 
-//     if(valor == "") { // valida valor
-//         existeErro = true;
-//         let validarValor = document.getElementById("validarValor");
-//         console.log('validarValor', validarValor);
-//         validarValor.innerHTML = "*Preencha o valor";
-//         //console.log('validarValor depois', validarValor);
-//     }
+function criarTabela(transacao, mercadoria, valor) {
+    var tabela = document.getElementById('tbody');
+    var quantidadeLinhas = tabela.rows.length;
+    var linha = tabela.insertRow(quantidadeLinhas); // Inserir linha após a última
+    var tipoTransacao = document.getElementById('transacao').value; //Resgata campo do HTML
 
-//     if(!existeErro) { // armazena no local storage
-//         localStorage.setItem('Cliente', mercadoria);
-//     }
+    // Inserir as colunas
+    var cellTransacao = linha.insertCell(0);
+    var cellMercadoria = linha.insertCell(1);
+    var cellValor = linha.insertCell(2);
 
-//     // localStorage.setItem('formulario', JSON.stringify((mercadoria: 'mercadoria', valor: 'valor'));
+    // Inserir o campo do formulario na celular
+    cellMercadoria.innerHTML = mercadoria;
+    cellMercadoria.className = 'tr-border';
+    cellValor.innerHTML = valor;
+    cellValor.className = 'tr-right tr-border';
+    cellTransacao.className = 'tr-border tipoTransacao';
 
-    
-// }
-
-
-// Máscara da moeda (Não entendi)
-function formatoMoeda() {
-
-    var elemento = document.getElementById('valor');
-    var valor = elemento.value;
-
-    valor = valor + '';
-    valor = parseInt(valor.replace(/[\D]+/g, ''));
-    valor = valor + '';
-    valor = valor.replace(/([0-9]{2})$/g, ",$1");
-
-    if (valor.length > 6) {
-        valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+    if (tipoTransacao == 'compra') {
+        cellTransacao.innerHTML = '-';
+    } else {
+        cellTransacao.innerHTML = '+';
     }
 
-    elemento.value = valor;
-    if(valor == 'NaN') elemento.value = '';
 }
+
+//Segunda aula
 
 // 46 minutos do video
 // 1h02 local storage
@@ -140,28 +138,6 @@ function formatoMoeda() {
 //         total -= prod.valor
 //     }
 // });
-
-// \/ nao entendi mt bem \/
-// produtos.reduce((total, prod) -> {
-
-// })
-
-// TOTAL.VALOR += (PROD.TIPO == VENDA) ? PORD.VALOR : PORD.VALOR * -1
-// return total
-
-// mascara numero
-
-// function verificatecla(e) {
-//    e.preventDefault()
-//      console.log(e)
-//      inputValor = document.querySelector('input[name="mercadoira"]')
-//      if ("1234567890".indexOf(e.key) != -1 ) {
-//  inputValor.value += e.key
-//}
-// 
-
-//inputValor.balue = (inputValor.value(.replaceAll('.', "").replaceAll(',', ".")).toLocaleString('pt-BR')
-//}
 
 // preencher tabela
 
