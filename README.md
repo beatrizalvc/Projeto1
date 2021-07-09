@@ -7,17 +7,18 @@ No layout original vocês vão ver que existem itens no menu sem utilidade. Vamo
 
 # Durante o desenvolvimento portanto, vocês devem:
 
-Alterar o link “Resumo” para “Cadastro de transações”.
-Alterar o link “Dashboard” para “Limpar dados”.
-Alterar o link “Configurações” para “Salvar no servidor”.
-O que sua aplicação deverá fazer
-Incluir transações de compra ou venda de mercadoria.
-Criar um extrato das transações incluídas. As transações deverão ser mostradas na ordem em que foram incluídas.
-Mostrar o saldo final e destacar se houve lucro ou prejuízo.
-A aplicação deverá ser responsiva e estar de acordo com o layout fornecido.
-Persistir as transações no Local Storage.
-Ter a opção de salvar os dados em um servidor.
-
+<ul>
+  <li>Alterar o link “Resumo” para “Cadastro de transações”.</li>
+<li>Alterar o link “Dashboard” para “Limpar dados”.</li>
+<li>Alterar o link “Configurações” para “Salvar no servidor”.</li>
+<li>O que sua aplicação deverá fazer</li>
+<li>Incluir transações de compra ou venda de mercadoria.</li>
+<li>Criar um extrato das transações incluídas. As transações deverão ser mostradas na ordem em que foram incluídas.</li>
+<li>Mostrar o saldo final e destacar se houve lucro ou prejuízo.</li>
+<li>A aplicação deverá ser responsiva e estar de acordo com o layout fornecido.</li>
+<li>Persistir as transações no Local Storage.</li>
+<li>Ter a opção de salvar os dados em um servidor.</li>
+</ul>
 # Outros requisitos
 # HTML:
 
