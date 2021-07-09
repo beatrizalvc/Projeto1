@@ -1,4 +1,4 @@
-## Desafio de HTML, CSS e JS da NewTab Academy.
+<h1>Desafio de HTML, CSS e JS da NewTab Academy.</h1>
 
 # Sobre o projeto
 Seu objetivo é criar uma SPA (Single Page Application) seguindo o layout que está nesta url: https://goo.gl/yMrCaf.
@@ -19,7 +19,8 @@ No layout original vocês vão ver que existem itens no menu sem utilidade. Vamo
 <li>Persistir as transações no Local Storage.</li>
 <li>Ter a opção de salvar os dados em um servidor.</li>
 </ul>
-# Outros requisitos
+
+<h2> Outros requisitos </h2>
 # HTML:
 
 As opções do campo “Tipo de transação” são: Compra e Venda.
