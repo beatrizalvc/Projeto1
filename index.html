@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -9,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Controle Financeiro </title>
 </head>
+
 <body>
     <header>
         <section>
@@ -23,11 +25,11 @@
                 </div>
                 <ul>
                     <li><a class="menu-link" href="#">X</a> </li>
-                    <li><a class="menu-link" href="#">Limpar dados</a> </li>
+                    <li><a class="menu-link" href="#" onclick="deletarTransacoes()">Limpar dados</a> </li>
                     <li><a class="menu-link" href="#">Cadastro de transações</a> </li>
                     <li><a class="menu-link" href="#">Salvar no servidor</a> </li>
                 </ul>
-            </nav> 
+            </nav>
             <!-- Botão Menu -->
         </section>
     </header>
@@ -36,38 +38,41 @@
         <div class="box-input">
             <h3 class="nova-transacao"> Nova transação </h3>
             <!-- FOMULÁRIO -->
-            <form >
-                <div class="formulario"> 
+            <form onsubmit="validarForm(event); return false" >
+                <div class="formulario">
                     <div class="item">
-                        <label for="transacao"> Tipo de transação </label> 
-                        <select id="transacao" name="transacao" >
-                            <option class="optionTransacao" value="compra"> Compra </option>
-                            <option class="optionTransacao" value="venda"> Venda </option>
+                        <label for="transacao"> Tipo de transação </label>
+                        <select id="transacao" name="transacao">
+                                <option class="optionTransacao" value=""> Selecione um tipo </option>
+                                <option class="optionTransacao" value="-"> Compra </option>
+                                <option class="optionTransacao" value="+"> Venda </option>
                         </select>
+                        <!-- MENSAGEM VALIDAÇÃO JS-->
+                        <div id="erroTransacao"></div>
                     </div>
                     <div class="item-maior">
-                        <label id="labelMercadoria" for="mercadoria"> Nome da mercadoria </label> 
-                        <input id="mercadoria" name="mercadoria" type="text" placeholder="Input" />
+                        <label id="labelMercadoria" for="mercadoria"> Nome da mercadoria </label>
+                        <input id="mercadoria" name="mercadoria" type="text" placeholder="Inserir a mercadoria" />
                         <!-- MENSAGEM VALIDAÇÃO JS-->
-                        <div id="divMercadoria"></div>
+                        <div id="erroMercadoria"></div>
                     </div>
                     <div class="item">
                         <label id="labelValor" for="valor"> Valor </label>
-                        <input id="valor" name="valor" type="text" placeholder="R$ 0,00" onkeypress="mascaraNumero(event)" />
-                        <!-- MENSAGEM VALIDAÇÃO JS-->
-                        <div id="divValor"></div>
+                        <input id="valor" name="valor" type="text" placeholder="R$ 0,00" onkeypress="mascaraNumero(event)"/>
+                        <!-- MENSAGEM VALIDAÇÃO JS onkeypress="mascaraNumero(event)"-->
+                        <div id="erroValor"></div>
                     </div>
                 </div>
-                <div class="botao-transacao">
-                </form>
-                <input class="submit" type="button" value="Adicionar transação" onclick="criarTabela(transacao.value, mercadoria.value, valor.value); validarForm()"></input>
+                <!-- <div class="botao-transacao"></div> -->
+                <input class="submit" type="submit" value="Adicionar transação" ></input>
                 <div id="msgErro"></div>
                 <div id="msgSucesso"></div>
-                </div>
+            </form>
+        
         </div>
         <!-- Caixa Extrato -->
         <div class="extratos">
-            <h3> Extrato de transações </h3> 
+            <h3> Extrato de transações </h3>
             <div class="table">
                 <table>
                     <thead>
@@ -77,7 +82,13 @@
                             <th class="tr-fim"> Valor </th>
                         </tr>
                     </thead>
-                    <tbody id="tbody"> <!-- CORPO DA TABELA -->
+                    <tbody id="tbody">
+                        <tr>
+                            <td colspan="3">
+                                Nenhuma transação cadastrada.
+                            </td>
+                        </tr>
+                        <!-- CORPO DA TABELA -->
                         <!-- <tr  class="tr-border">
                             <td> + </td>
                             <td id="tdTransacao"> Lorem ipsum dolor sit amet consectetur </td>
@@ -94,19 +105,20 @@
                             <td class="tr-right"> R$ 9,99 </td>
                         </tr> -->
                     </tbody> <!-- FIM DO CORPO DA TABELA -->
-                   <tfoot>
-                       <tr class="tr-borda-dupla">
-                           <td></td>
-                           <td class="tr-left"><strong> Total </strong>  </td>
-                           <td class="tr-right"><strong> R$ 12.909,99 </strong>  </td>
-                       </tr>
-                       <tr>
-                           <td colspan="3" class="lucro"> [LUCRO]</td>
-                       </tr>
-                   </tfoot>
+                    <tfoot>
+                        <td></td> <!-- td que adiciona outra borda acima do Total -->
+                        <tr class="tr-borda-dupla">
+                            <td></td>
+                            <td class="tr-left"><strong> Total </strong> </td>
+                            <td id="tdTotal" class="tr-right"><strong>R$</strong> </td>
+                        </tr>
+                        <tr>
+                            <td id="textoTotal" colspan="3" class="lucro">[]</td>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
-        </div> 
+        </div>
     </section>
     <footer></footer>
 
