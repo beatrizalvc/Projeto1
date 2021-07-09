@@ -97,7 +97,14 @@ function mascaraNumero(e) {
 
 //Função que deleta todas as transações do localStorage
 function deletarTransacoes() {
-    localStorage.removeItem('lista') //Deleta o objeto 
+    localStorage.removeItem('lista') //Deleta o objeto
+    tbody.innerHTML = //adiciona sempre uma <tr> nova
+        `<tr class="tr-border">
+            <td colspan="3"> Nenhuma transação cadastrada. </td>
+        </tr>
+        `
+    tdTotal.innerHTML = `<strong>R$</strong>`;
+    textoTotal.innerHTML = "[]"
     alert("Registros Excluídos!")
 }
 
