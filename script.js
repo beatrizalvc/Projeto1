@@ -100,3 +100,26 @@ function deletarTransacoes() {
     localStorage.removeItem('lista') //Deleta o objeto 
     alert("Registros Excluídos!")
 }
+
+let listaJSON = JSON.stringify(localStorage.getItem('lista'));
+
+function create(){
+    fetch("https://api.airtable.com/v0/appRNtYLglpPhv2QD/Historico", {
+        method: "POST",
+        headers: {
+            Authorization: 'Bearer key2CwkHb0CKumjuM',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            records: [
+                {
+                    fields: {
+                        Aluno: '3496',
+                        Json: lista
+                    }
+                }
+            ]
+        }) 
+    });
+
+}
