@@ -52,5 +52,4 @@ No layout original vocês vão ver que existem itens no menu sem utilidade. Vamo
     <li>Json: Json com todas as transações armazenadas no Local Storage.</li>
   </ul>
 <li>Métodos: primeiramente listar os registros para buscar o “id” referente ao seu registro. Em seguida, realizar o update do valor do “Json”.</li>
-<li>Para visualizar os registros e verificar se deu certo a atualização, acesse: https://airtable.com/shrgRkjwA8uitAY3s</li>
 </ul>
