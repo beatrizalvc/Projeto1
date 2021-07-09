@@ -21,11 +21,11 @@ No layout original vocês vão ver que existem itens no menu sem utilidade. Vamo
 </ul>
 
 <h2> Outros requisitos </h2>
-# HTML:
-
-As opções do campo “Tipo de transação” são: Compra e Venda.
-Caso não exista nenhuma transação cadastrada, adicione a mensagem “Nenhuma transação cadastrada.” na lista do Extrato.
-
+<h2> HTML: </h2>
+<ul>
+  <li> As opções do campo “Tipo de transação” são: Compra e Venda. </li>
+<li> Caso não exista nenhuma transação cadastrada, adicione a mensagem “Nenhuma transação cadastrada.” na lista do Extrato. </li>
+</ul>
 # CSS:
 
 Testar em smartphones, tablets (modos portrait e landscape) e monitores a partir de 1024px até 1900px. (Através do inspecionar elemento no navegador)
