@@ -9,30 +9,35 @@ No layout original vocês vão ver que existem itens no menu sem utilidade. Vamo
 
 <ul>
   <li>Alterar o link “Resumo” para “Cadastro de transações”.</li>
-<li>Alterar o link “Dashboard” para “Limpar dados”.</li>
-<li>Alterar o link “Configurações” para “Salvar no servidor”.</li>
-<li>O que sua aplicação deverá fazer</li>
-<li>Incluir transações de compra ou venda de mercadoria.</li>
-<li>Criar um extrato das transações incluídas. As transações deverão ser mostradas na ordem em que foram incluídas.</li>
-<li>Mostrar o saldo final e destacar se houve lucro ou prejuízo.</li>
-<li>A aplicação deverá ser responsiva e estar de acordo com o layout fornecido.</li>
-<li>Persistir as transações no Local Storage.</li>
-<li>Ter a opção de salvar os dados em um servidor.</li>
+  <li>Alterar o link “Dashboard” para “Limpar dados”.</li>
+  <li>Alterar o link “Configurações” para “Salvar no servidor”.</li>
+  <li>O que sua aplicação deverá fazer</li>
+  <li>Incluir transações de compra ou venda de mercadoria.</li>
+  <li>Criar um extrato das transações incluídas. As transações deverão ser mostradas na ordem em que foram incluídas.</li>
+  <li>Mostrar o saldo final e destacar se houve lucro ou prejuízo.</li>
+  <li>A aplicação deverá ser responsiva e estar de acordo com o layout fornecido.</li>
+  <li>Persistir as transações no Local Storage.</li>
+  <li>Ter a opção de salvar os dados em um servidor.</li>
 </ul>
 
 <h2> Outros requisitos </h2>
+
 <h2> HTML: </h2>
+
 <ul>
   <li> As opções do campo “Tipo de transação” são: Compra e Venda. </li>
-<li> Caso não exista nenhuma transação cadastrada, adicione a mensagem “Nenhuma transação cadastrada.” na lista do Extrato. </li>
+  <li> Caso não exista nenhuma transação cadastrada, adicione a mensagem “Nenhuma transação cadastrada.” na lista do Extrato. </li>
 </ul>
-# CSS:
 
-Testar em smartphones, tablets (modos portrait e landscape) e monitores a partir de 1024px até 1900px. (Através do inspecionar elemento no navegador)
-A fonte utilizada é a Lato.
-A largura máxima do conteúdo é 1100px.
+<h2> CSS: </h2>
 
-# Javascript:
+<ul>
+<li> Testar em smartphones, tablets (modos portrait e landscape) e monitores a partir de 1024px até 1900px. (Através do inspecionar elemento no navegador)</li>
+<li> A fonte utilizada é a Lato.</li>
+<li> A largura máxima do conteúdo é 1100px.</li>
+</ul>
+  
+<h2> Javascript: </h2>
 
 Validar o formulário para que todos os campos sejam preenchidos.
 Adicionar uma máscara no campo “Valor” para que apenas números sejam preenchidos e com a formatação correta. (Padrão: 10,90)
