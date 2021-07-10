@@ -131,7 +131,7 @@ function salvarServidor(){
     })
 };
 
-// Criar se não tiver o dado no servidor
+// Criar se não tiver dado no servidor
 function creat(){
     let listaJson = JSON.stringify(lista);
     fetch("https://api.airtable.com/v0/appRNtYLglpPhv2QD/Historico", {
@@ -153,7 +153,7 @@ function creat(){
     })
 }
 
-// Atualizar se tiver o dado no servidor
+// Atualizar se já existir dado no servidor
 function update(id){
     let listaJson = JSON.stringify(lista);
     fetch("https://api.airtable.com/v0/appRNtYLglpPhv2QD/Historico", {
