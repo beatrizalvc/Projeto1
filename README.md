@@ -11,7 +11,10 @@ No layout original vocês vão ver que existem itens no menu sem utilidade. Vamo
   <li>Alterar o link “Resumo” para “Cadastro de transações”.</li>
   <li>Alterar o link “Dashboard” para “Limpar dados”.</li>
   <li>Alterar o link “Configurações” para “Salvar no servidor”.</li>
-  <li>O que sua aplicação deverá fazer</li>
+</ul>
+  
+<h2> O que sua aplicação deverá fazer </h2>
+<ul>
   <li>Incluir transações de compra ou venda de mercadoria.</li>
   <li>Criar um extrato das transações incluídas. As transações deverão ser mostradas na ordem em que foram incluídas.</li>
   <li>Mostrar o saldo final e destacar se houve lucro ou prejuízo.</li>
