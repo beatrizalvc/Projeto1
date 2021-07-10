@@ -94,7 +94,6 @@ function mascaraNumero(e) {
     } 
 }
 
-
 //Função que deleta todas as transações do localStorage
 function deletarTransacoes() {
     localStorage.removeItem('lista') //Deleta o objeto
@@ -108,25 +107,71 @@ function deletarTransacoes() {
     alert("Registros Excluídos!")
 }
 
-let listaJSON = JSON.stringify(localStorage.getItem('lista'));
+// Salvar no servidor
+const aluno = "3496"; //identificador do aluno - 4 ultimos números do cpf
+function salvarServidor(){
+    fetch("https://api.airtable.com/v0/appRNtYLglpPhv2QD/Historico", {
+    headers: {
+        Authorization: "Bearer key2CwkHb0CKumjuM"
+        }
+    })
+    .then((response) => {return response.json()})
+    .then((responseJson) => {
+        exist = responseJson.records.filter((record) => {
+            if (aluno == record.fields.Aluno){
+                return true
+            }
+            return false
+        })
+        if (exist.length == 0){ //se não exisitir registro
+            creat() //executa função que cria
+        } else{ //se não existe
+            update(exist[0].id) //executa função que atualiza, add novo o id
+        }
+    })
+};
 
-function create(){
+// Criar se não tiver o dado no servidor
+function creat(){
+    let listaJson = JSON.stringify(lista);
     fetch("https://api.airtable.com/v0/appRNtYLglpPhv2QD/Historico", {
         method: "POST",
         headers: {
-            Authorization: 'Bearer key2CwkHb0CKumjuM',
-            'Content-Type': 'application/json'
-        },
+            Authorization: "Bearer key2CwkHb0CKumjuM",
+            "Content-Type" : "application/json"
+            },
         body: JSON.stringify({
-            records: [
+            "records": [
                 {
-                    fields: {
-                        Aluno: '3496',
-                        Json: lista
+                "fields": {
+                    "Aluno": aluno,
+                    "Json": listaJson
                     }
                 }
             ]
-        }) 
-    });
+        })
+    })
+}
 
+// Atualizar se tiver o dado no servidor
+function update(id){
+    let listaJson = JSON.stringify(lista);
+    fetch("https://api.airtable.com/v0/appRNtYLglpPhv2QD/Historico", {
+        method: "PATCH",
+        headers: {
+            Authorization: "Bearer key2CwkHb0CKumjuM",
+            "Content-Type" : "application/json"
+            },
+        body: JSON.stringify({
+            "records": [
+                {
+                "id": id,
+                "fields": {
+                    "Aluno": aluno,
+                    "Json": listaJson
+                    }
+                }
+            ]
+        })
+    })
 }
